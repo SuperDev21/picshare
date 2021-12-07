@@ -1,0 +1,37 @@
+/* button for upload and display fin css */
+.btn_upload{
+    border-color: teal !important;
+    border-radius: 7px !important;
+}
+.chose_category{
+    border-color: teal !important;
+    border-radius: 3px !important;
+    border: 2px solid !important;
+    color: teal !important;
+    font-weight: bold !important;
+    background-color: white !important;
+}
+.btn_form{
+    border-color:rgb(187, 184, 184) !important;
+}
+
+/* button for upload and display debut css */
+.button_pblish_upload{
+    background-color: teal !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+.button_pblish_upload:hover{
+    background-color: white !important;
+    color:teal !important;
+    border: 2px solid !important;
+    border-color: teal !important;
+}
+.ul-next_previous> li> a{
+    color:teal !important;
+    border: 1px solid !important;
+   
+}
+.ul-next_previous> li{
+    border: teal !important;
+}

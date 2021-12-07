@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container-fluid">
+  <div class="row w-100 px-0">
+    <div class="col-2  p-0 pt-5 ">
+      <div class="nav_top  py-5 section_category">
+        <h4 class="text-center mb-3 titre_top ">
+          All categories
+        </h4>
+        <section>
+          <ul class="p-0 m-auto ul_category text-center">
+            <li class="btn_cat "> <a class="li_chose_cat" href="/Animals"> Animals</a></li>
+            <li class="btn_cat "> <a class="li_chose_cat" href="/Cities">Cities</a></li>
+            <li class="btn_cat"><a class="li_chose_cat" href="/Landscapes"> Landscapes</a></li>
+            <li class="btn_cat"><a class="li_chose_cat" href="/Portraits"> Portraits</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div class="col-9 text-center p-3 mx-auto">
+      <div class="row  row-cols-lg-3  row-cols-md-2  g-4 p-2 ">
+        {% for img in all_images %}
+        <div class="col-9 div-img">
+          <a href="/display/{{img[1]}}"> <img class="card-img-top img_home " src="/uploads/{{img[0]}}"
+              alt="Card image cap">
+          </a>
+        </div>
+        {% endfor %}
+        {% if all_cat_images %}
+        {% for img in all_cat_images %}
+        <div class="col div-img">
+          <a href="/display/{{img[1]}}"> <img class="card-img-top  img_home" src="/uploads/{{img[0]}}"
+              alt="Card image cap"></a>
+          <div class="col d-flex p-2 mb-2">
+            <div>
+              <img src="/static/images/like.png" alt="like" class="icon-imag-like-home">
+              <img src="/static/images/cour.png" alt="icon cour" class="icon-imag-like-home">
+            </div>
+            <div>
+              <img src="/static/images/étoile.jpg" alt="étoile" class="icon-imag-star-home">
+              <img src="/static/images/étoile.jpg" alt="étoile" class="icon-imag-star-home">
+              <img src="/static/images/étoile.jpg" alt="étoile" class="icon-imag-star-home">
+              <img src="/static/images/étoile.jpg" alt="étoile" class="icon-imag-star-home">
+              <img src="/static/images/étoile.jpg" alt="étoile" class="icon-imag-star-home">
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

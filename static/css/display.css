@@ -1,0 +1,30 @@
+.row{
+    padding: 5%;
+    /* background-color: #a9b1aaaf !important; */
+}
+.comment{
+    padding: 3%;
+    margin: 3% 0;
+    background-color: rgba(216, 215, 215, 0.623);
+    border-radius: 10px;
+}
+.slid{
+    background-color:rgba(216, 215, 215, 0.623);
+}
+.img_display{
+    border-radius: 10px !important;
+    }
+    .icon-imag-like{
+        width: 10% !important;
+    }
+    .icon-imag-star{
+        width: 3% !important;
+    }
+    .a-comment-number{
+        color: teal !important;
+        text-decoration: none !important;
+    }
+    .span-count{
+        color: teal;
+    }
+    

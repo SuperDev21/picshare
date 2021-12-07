@@ -1,0 +1,54 @@
+{% extends 'layout.html'%}
+{% block content%}
+<div class="container m-0 mw-100 p-0">
+    <div class="row">
+        <div class="col-9 m-auto">
+            <div class="d-flex justify-content-between">
+                <div class="h4 p-2">{{ titre }}</div>
+                <div class="p-2">{{ date }}</div>
+            </div>
+            <div class="">
+                <img src="/uploads/{{path}}" class="img-fluid  mb-2 img_display m" alt="Responsive image">
+            </div>
+            <div class="col d-flex p-2 mb-2">
+                <div>
+                    <img src="/static/images/like.png" alt="like" class="icon-imag-like">
+                    <img src="/static/images/cour.png" alt="icon cour" class="icon-imag-like">
+                </div>
+                <div>
+                    <img src="/static/images/étoile.jpg" alt="étoile" class="icon-imag-star">
+                    <img src="/static/images/étoile.jpg" alt="étoile" class="icon-imag-star">
+                    <img src="/static/images/étoile.jpg" alt="étoile" class="icon-imag-star">
+                    <img src="/static/images/étoile.jpg" alt="étoile" class="icon-imag-star">
+                    <img src="/static/images/étoile.jpg" alt="étoile" class="icon-imag-star">
+                </div>
+                <div class="d-flex">
+                    <span class="span-count">{{count}}</span>
+                    <a href="" class="px-1 a-comment-number"> Comments</a>
+                </div> 
+            </div>
+            <div class="col border mt-3 p-2">
+                <p class="text-break"> {{description}}</p>
+            </div>
+            <h6 class="mt-4"> Add a comment </h6>
+            <form method=post>
+                <div class="col my-3">
+                    <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Your name" name="name" required>
+                </div>
+                <div class="col mb-3">
+                    <textarea class="form-control" id="validationDefault01" placeholder="your comment" required name="comment"></textarea>
+                </div>
+                <div class="col-2">
+                    <button class="btn button_pblish_upload" type="submit">Publish</button>
+                </div>
+            </form>
+            {% for comment in all_comments%}
+            <div class="col comment">
+                <h5 class="text-break"> {{comment[1]}}</h5>
+                <p class="text-break"> {{comment[2]}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock%}

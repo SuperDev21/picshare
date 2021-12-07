@@ -1,0 +1,70 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+#header {
+    background-color: teal;
+    /* height: 80px; */
+    width: 100%;
+    display: inline-flex;
+    justify-content: stretch;
+    color: white;
+    }
+
+.accroche {
+    padding-top: 45px;
+}
+
+#logo {
+    padding-left: 20px;
+    vertical-align: middle;
+    height: 80px;
+    width: auto;
+}
+
+.navbar>.container-fluid{
+    justify-content: start !important;
+}
+.b_nav{
+    color: white !important;
+    border-color: white !important;
+    font-weight: bold !important;
+}
+.b_nav:hover{
+    background-color: white !important;
+    color: teal !important;
+}
+
+#footer {
+    background-color: teal;
+    color:white;
+    height: 70px;
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.team,a {
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+
+/* ------------ small and meduim screen--------------*/
+@media screen and (max-width: 550px){
+    .team{
+        display: none;
+    }
+}
+
+
+/* ------------ small and meduim screen--------------*/
+@media screen and (max-width: 860px) {
+    .accroche{
+        display: none;
+    }
+}

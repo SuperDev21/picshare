@@ -1,0 +1,40 @@
+{% extends 'layout.html'%}
+{% block content%}
+<div class="container-fluid container_upload p-0 m-0 ">
+  <div class="row p-0 mt-5">
+    <div class="col-7 m-auto">
+      <div class="m-2 img_vide ">
+        <img src="/static/images/img_vide.png" alt=" image vide" class="w-100 img_vide ">
+      </div> 
+    </div>
+  </div>
+  <div class="row p-0">
+    <div class="text-center  col-6 m-auto">
+      <form class="was-validated mb-5"  method="post" enctype=multipart/form-data>
+        <div class="my-5">
+          <input type="file" class="form-control btn_form " aria-label="file example file" name=file required>
+          <div class="invalid-feedback">Accepted formats ( png, jpg, jpeg, gif, svg )</div>
+        </div>
+        <div class="my-4">
+          <input class="form-control is-invalid btn_form p-2" placeholder="Give a name for your image" name="name" required>
+        </div>
+        <div class="my-5">
+          <textarea class="form-control is-invalid btn_form p-2" id="validationTextarea" placeholder="Give a discription for your image" name="description" required></textarea>
+        </div>
+        <div class="my-5">
+          <select class="form-select btn_form p-2" required aria-label="select example" name="name_cat">
+            <!-- <option value=""  name="name_cat">Choose a category</option> -->
+            <option value="">Choose a category</option>
+            <option value="Animals">Animals</option>
+            <option value="Cities">Cities</option>
+            <option value="Landscapes">Landscapes</option>
+            <option value="Outdoors">outdoors</option>
+            <option value="Portraits">portraits</option>
+          </select>
+        </div>
+        <input type=submit value=Upload class="button_pblish_upload p-2 px-4 btn_upload">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock%}
